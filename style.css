@@ -1,0 +1,229 @@
+@font-face {
+  font-family: "ubuntu";
+  src: url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "ubuntu";
+}
+
+body {
+  font-family: "ubuntu";
+  background: #151515b3;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#833ab4",endColorstr="#45fcdb",GradientType=1);
+}
+.addBox.hidden,
+.No_Note-wrapper.hidden,
+.wrapper.hidden {
+  display: none;
+  transform: scale(1);
+}
+.popUp-wrapper.show,
+.options.show,
+.addBox:hover span {
+  transform: scale(1);
+  transition: 0.3s ease-in-out;
+}
+.No_Note-wrapper {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  text-transform: capitalize;
+}
+.No_Note span {
+  color: #e7e7e7;
+  font-size: 1.5rem;
+}
+.No_Note img {
+  width: 200px;
+}
+.getOptions {
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+.wrapper {
+  height: -webkit-fill-available;
+  padding: 30px 20px 90px 20px;
+  display: grid;
+  gap: 15px;
+  overflow-y: auto;
+  grid-template-columns: repeat(auto-fill, 275px);
+  align-items: center;
+  justify-content: center;
+}
+
+.wrapper li {
+  list-style: none;
+  background: #fff;
+  border-radius: 6px;
+  padding: 17px 20px 10px;
+}
+.note {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.popUp-wrapper,
+.addBox i {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.addBox {
+  position: fixed;
+  right: 1rem;
+  bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  gap: 1rem;
+}
+.addBox i {
+  width: 3rem;
+  height: 3rem;
+  font: 2.5rem thin;
+  border-radius: 50%;
+  margin: 1rem 0;
+  background: #000000b3;
+  color: #fff;
+}
+.addBox span {
+  color: white;
+  background: #000000b3;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.2rem;
+  transform: scale(0);
+  position: relative;
+  font-family: "ubuntu";
+}
+.details {
+  display: flex;
+  justify-content: space-between;
+}
+.details-header {
+  font: 1rem bolder;
+  margin: 0.5rem 0;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  text-shadow: 0 0 0px black;
+  font-family: "ubuntu";
+}
+.details-text {
+  font: 0.8rem thin;
+  font-family: "ubuntu";
+}
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #000000b2;
+  margin: 1rem 0 0;
+  text-shadow: 0 0 1px;
+}
+.content-time i {
+  color: #5a5a5a85;
+}
+.content-time span {
+  font: 0.7rem thin;
+  display: flex;
+  margin: 4px 0;
+  gap: 0.5rem;
+  font-family: "ubuntu";
+}
+.closeBtn {
+  cursor: pointer;
+}
+.getOptions {
+  display: flex;
+  justify-content: flex-end;
+}
+.options {
+  position: absolute;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  box-shadow: -5px 5px 20px -1px black;
+  transform: scale(0);
+  transition: 0.2s ease-in-out;
+  margin: 2rem 0rem;
+  border-radius: 6px;
+}
+.options button {
+  border: none;
+  padding: 3px 7px;
+  outline: none;
+  text-align: right;
+  border-radius: 3px;
+  background: #fff;
+  cursor: pointer;
+}
+.options button:hover {
+  background: #5a5a5a3d;
+}
+.options button i {
+  margin: 3px 6px;
+}
+
+.popUp-wrapper {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  background: #0000004d;
+  transform: scale(0);
+  transition: 0.05s ease-in-out;
+}
+.popUp {
+  width: 320px;
+  background: #fff;
+  padding: 1rem;
+  border-radius: 6px;
+}
+.popUp-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 0 1rem;
+}
+.popUp-header i {
+  margin: 0.2rem 0.7rem;
+  font-size: 1.2rem;
+}
+.row {
+  display: flex;
+  flex-direction: column;
+}
+.title input {
+  padding: 0.4rem 0.5rem;
+  border-radius: 0.35rem;
+  margin: 0.5rem 0.4rem;
+  outline: none;
+  border: 1px solid;
+}
+
+.description textarea {
+  padding: 0.5rem 0.8rem;
+  margin: 0.5rem 0.4rem;
+  outline: none;
+  border: 1px solid;
+  border-radius: 0.3rem;
+}
+#SaveBtn {
+  border: none;
+  display: flex;
+  width: 100%;
+  padding: 0.7rem 0.5rem;
+  margin: 0.3rem 0;
+  justify-content: center;
+  border-radius: 0.3rem;
+  background: #000000b3;
+  color: white;
+}

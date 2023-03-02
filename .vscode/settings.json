@@ -1,0 +1,9 @@
+{
+    "liveServer.settings.port": 5501,
+    "grammarly.selectors": [
+        {
+            "language": "html",
+            "scheme": "file"
+        }
+    ]
+}
